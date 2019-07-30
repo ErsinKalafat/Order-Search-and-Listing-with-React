@@ -1,0 +1,85 @@
+$baslikBoyutu: 30px;
+$icerikBoyutu: 15px;
+$altBaslikBoyutu: 20px;
+$kirmiziTonu: #943837;
+
+.ersinkalafat {
+  float: right;
+  font-size: 12px;
+  color: darkcyan;
+}
+
+div table thead tr th {
+  color: $kirmiziTonu;
+  padding: 12px;
+}
+
+
+.buton {
+  background: url("./buton.png") no-repeat 0 0 transparent;
+  cursor: pointer;
+  color: white;
+  font-size: $icerikBoyutu;
+  width: 150px;
+  height: 48px;
+  border: none;
+  float: right;
+
+  // pixel perfect çalışması için tarayıcı ayarlamaları.
+  -ms-interpolation-mode: nearest-neighbor; // IE 7+ (non-standard property)
+  image-rendering: -webkit-optimize-contrast; // Safari 6, UC Browser 9.9
+  image-rendering: -webkit-crisp-edges; // Safari 7+
+  image-rendering: -moz-crisp-edges; // Firefox 3.6+
+  image-rendering: -o-crisp-edges; // Opera 12
+  image-rendering: pixelated; // Chrome 41+ and Opera 26+
+}
+
+.textbox {
+  border-radius: 15px;
+  border : 1px solid $kirmiziTonu;
+  width: 100%;
+  height: 50px;
+  margin-top:5px;
+  font-size: 30px;
+  text-align: center;
+  color: $kirmiziTonu;
+}
+
+.formtablo {
+  padding: 10px;
+  text-align: left;
+  font-size: $icerikBoyutu;
+  border: #abafad;
+  width: 100%;
+  height: 40px;
+
+}
+
+.formbaslik {
+  text-align: center;
+  font-size: $baslikBoyutu;
+  font-weight: bold;
+  font-family: Tahoma;
+  color: #4f565a;
+  padding: 10px;
+}
+
+.altbaslik {
+  padding: 10px;
+  text-align: left;
+  font-size: $altBaslikBoyutu;
+  font-weight: bold;
+  font-family: Tahoma;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .buton {
+    background: url("./buton_buyuk.png") no-repeat 0 0 transparent;
+    width: 359px;
+    height: 48px;
+    margin-left: 10px;
+    text-align: center;
+    float: right;
+  }
+}
